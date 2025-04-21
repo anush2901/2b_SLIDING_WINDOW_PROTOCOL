@@ -9,6 +9,7 @@ To write a python program to perform sliding window protocol
 5. If your frames reach the server it will send ACK signal to client
 6. Stop the Program
 ## PROGRAM
+server.py
     import socket
     s=socket.socket()
     s.bind(('localhost',8000))
@@ -20,13 +21,13 @@ To write a python program to perform sliding window protocol
     st=0
     i=0
     while True:
-    while(i<len(l)):
-        st+=s
-        c.send(str(l[i:st]).encode())
-        ack=c.recv(1024).decode()
-        if ack:
-            print(ack)
-            i+=s
+       while(i<len(l)):
+          st+=s
+          c.send(str(l[i:st]).encode())
+          ack=c.recv(1024).decode()
+          if ack:
+              print(ack)
+              i+=s
 ## OUPUT
 ## RESULT
 Thus, python program to perform stop and wait protocol was successfully executed
